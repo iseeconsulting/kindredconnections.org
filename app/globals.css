@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kc-navy: #0f1c2e;
+  --color-kc-teal: #d68a2e;
+  --color-kc-peach: #f3e8db;
+  --color-kc-charcoal: #2b2730;
+  --color-kc-gray: #f6f1ea;
+  --color-kc-mist: #e9e2d6;
+}
+
+:root {
+  --bg: var(--color-kc-gray);
+  --text: #1f1b24;
+  color-scheme: light;
+}
+
+.container-kc {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem; /* 1152px */
+  padding-left: 1.5rem; /* 24px */
+  padding-right: 1.5rem; /* 24px */
+}
+
+/* smooth in-page anchor scrolling */
+html { scroll-behavior: smooth; }
+
+/* ===== Kindred design tokens & utilities ===== */
+@layer base {
+  body {
+    font-family: var(--font-sans), "Manrope", system-ui, -apple-system, sans-serif;
+    background:
+      radial-gradient(circle at 18% 20%, #ffffff 0, #ffffff 32%, transparent 42%),
+      radial-gradient(circle at 82% 18%, #fff4e4 0, #fff4e4 28%, transparent 40%),
+      radial-gradient(circle at 12% 84%, #f1e6d5 0, #f1e6d5 32%, transparent 45%),
+      var(--bg);
+    color: var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  .display {
+    font-family: var(--font-display), "DM Serif Display", Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-kc-teal);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-kc-teal) 80%, white);
+    color: #0f1c2e;
+  }
+}
+
+/* Buttons */
+@utility btn {
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition shadow-[0_10px_30px_rgba(15,28,46,0.12)];
+}
+@utility btn-primary {
+  @apply btn bg-gradient-to-r from-kc-teal to-[#f7c16c] text-kc-navy hover:from-[#f7c16c] hover:to-kc-teal;
+}
+@utility btn-outline {
+  @apply btn border border-kc-navy/50 text-kc-navy hover:bg-kc-navy hover:text-white;
+}
+
+/* Card */
+@utility card {
+  @apply bg-white/90 backdrop-blur rounded-2xl border border-kc-mist shadow-[0_14px_36px_rgba(12,21,38,0.08)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(12,21,38,0.12)];
+}
+
+/* Section spacing */
+@utility section-pad {
+  @apply py-24 md:py-28;
+}
+
+/* === Motion & Hover Enhancements === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reusable animation utilities */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
