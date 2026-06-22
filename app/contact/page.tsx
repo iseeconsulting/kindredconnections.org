@@ -103,7 +103,7 @@ export default function ContactPage() {
       <p className="mt-8 text-sm text-gray-500 text-center">
         You can also reach us directly at{" "}
         <a href="mailto:kianna@kindredkonnections.org" className="text-kc-teal underline">
-          kianna@kindredkonnections.org
+          Hello@kindredkonnections.org
         </a>
         .
       </p>
