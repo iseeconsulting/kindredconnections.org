@@ -307,8 +307,8 @@ export default function HomePage() {
               We’ll respond within two business days to schedule a consultation and outline next steps together.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
-              <a href="mailto:hello@kindredkonnections.com" className="btn-outline border-white text-white hover:bg-white hover:text-kc-navy">
-                Email: hello@kindredkonnections.com
+              <a href="mailto:kianna@kindredkonnections.org" className="btn-outline border-white text-white hover:bg-white hover:text-kc-navy">
+                Email: kianna@kindredkonnections.org
               </a>
             </div>
           </div>
