@@ -102,8 +102,8 @@ export default function ContactPage() {
       {/* Alt contact */}
       <p className="mt-8 text-sm text-gray-500 text-center">
         You can also reach us directly at{" "}
-        <a href="mailto:kianna@kindredkonnections.org" className="text-kc-teal underline">
-          kianna@kindredkonnections.org
+        <a href="mailto:hello@kindredkonnections.com" className="text-kc-teal underline">
+          hello@kindredkonnections.com
         </a>
         .
       </p>
