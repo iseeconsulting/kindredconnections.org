@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, Manrope } from "next/font/google";
 
+import Script from "next/script";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./globals.css";
@@ -58,6 +59,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${sans.variable} ${display.variable} font-sans min-h-screen bg-kc-gray text-kc-charcoal antialiased`}>
+
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-LYRG7J9J31"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-LYRG7J9J31');
+            `}
+          </Script>
+         
         <Header />
         <main className="min-h-[70vh]">{children}</main>
         <Footer />
