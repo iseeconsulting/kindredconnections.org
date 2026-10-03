@@ -49,6 +49,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+verification: {
+    google: "Pym0H4yaYw7HdtDIaRI7JYG6XTJckB_ywA1jav9-Yds",
+  },
+  
 };
 
 export const viewport = {
